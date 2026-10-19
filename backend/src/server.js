@@ -46,35 +46,7 @@ app.get("/test-resume", (req, res) => {
   res.send("Resume test route is working!");
 });
 
-// PDF resume download
-app.get("/api/resume/pdf", (req, res) => {
-  const filePath = path.join(resumePath, "Vibhuti_CV.pdf");
-
-  if (!fs.existsSync(filePath)) {
-    return res.status(404).json({
-      success: false,
-      message: "PDF resume not found",
-      checkedPath: filePath,
-    });
-  }
-
-  res.download(filePath, "Vibhuti_CV.pdf");
-});
-
-// Word resume download
-app.get("/api/resume/word", (req, res) => {
-  const filePath = path.join(resumePath, "Vibhuti_CV.docx");
-
-  if (!fs.existsSync(filePath)) {
-    return res.status(404).json({
-      success: false,
-      message: "Word resume not found",
-      checkedPath: filePath,
-    });
-  }
-
-  res.download(filePath, "Vibhuti_CV.docx");
-});
+// Resume routes are handled by ResumeRoutes.js (mounted at /api/resume)
 
 // Start server
 async function startServer() {

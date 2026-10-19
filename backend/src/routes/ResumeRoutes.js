@@ -70,7 +70,7 @@ router.get("/pdf", (req, res) => {
   return res.download(filePath, "Vibhuti_CV.pdf");
 });
 
-router.get("/docx", (req, res) => {
+router.get("/word", (req, res) => {
   const filePath = path.join(
     resumeDirectory,
     "Vibhuti_CV.docx"
