@@ -1,0 +1,338 @@
+html {
+  background: #090b0a;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #090b0a;
+  color: #f5f7f2;
+}
+
+#root {
+  min-height: 100vh;
+  background: #090b0a;
+}
+
+/* LIGHT MODE THEME */
+html[data-theme="light"] {
+  color-scheme: light;
+  --page-bg: #f5f7f2;
+  --section-bg: #ffffff;
+  --card-bg: #edf1e8;
+  --text-color: #171b14;
+  --muted-color: #60675b;
+  --border-color: #d9e0d1;
+  --accent-color: #4f7f00;
+}
+
+/* Main page and sections */
+html[data-theme="light"],
+html[data-theme="light"] body,
+html[data-theme="light"] #root {
+  background: var(--page-bg) !important;
+  color: var(--text-color) !important;
+}
+
+html[data-theme="light"] .hero,
+html[data-theme="light"] .about,
+html[data-theme="light"] .skills,
+html[data-theme="light"] .projects,
+html[data-theme="light"] .education,
+html[data-theme="light"] .certificates,
+html[data-theme="light"] .contact {
+  background: var(--section-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Cards */
+html[data-theme="light"] .about-highlights,
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .journey-column,
+html[data-theme="light"] .timeline-card,
+html[data-theme="light"] .certificate-card,
+html[data-theme="light"] .contact-form-card {
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Text */
+html[data-theme="light"] .hero-description,
+html[data-theme="light"] .about-content p,
+html[data-theme="light"] .skills-subtitle,
+html[data-theme="light"] .projects-subtitle,
+html[data-theme="light"] .education-subtitle,
+html[data-theme="light"] .certificates-subtitle,
+html[data-theme="light"] .contact-subtitle,
+html[data-theme="light"] .certificate-description,
+html[data-theme="light"] .timeline-detail {
+  color: var(--muted-color) !important;
+}
+
+/* Navbar */
+html[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: var(--border-color) !important;
+}
+
+html[data-theme="light"] .navbar .nav-links a {
+  color: var(--text-color) !important;
+}
+
+/* Form fields */
+html[data-theme="light"] .contact-field input,
+html[data-theme="light"] .contact-field textarea {
+  background: #ffffff !important;
+  color: #171b14 !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ===== LIGHT MODE: BETTER TEXT VISIBILITY ===== */
+
+html[data-theme="light"] {
+  --page-bg: #f0f4eb;
+  --section-bg: #f7f9f3;
+  --card-bg: #e8eee0;
+  --text-color: #192216;
+  --muted-color: #515c4b;
+  --border-color: #d0dac5;
+  --accent-color: #477900;
+}
+
+/* Page backgrounds */
+html[data-theme="light"],
+html[data-theme="light"] body,
+html[data-theme="light"] #root {
+  background: #f0f4eb !important;
+  color: #192216 !important;
+}
+
+/* All major sections */
+html[data-theme="light"] .hero,
+html[data-theme="light"] .about,
+html[data-theme="light"] .skills,
+html[data-theme="light"] .projects,
+html[data-theme="light"] .education,
+html[data-theme="light"] .certificates,
+html[data-theme="light"] .contact {
+  background: #f0f4eb !important;
+  color: #192216 !important;
+}
+
+/* Headings: override hardcoded white colors */
+html[data-theme="light"] .hero h1,
+html[data-theme="light"] .about h2,
+html[data-theme="light"] .about h3,
+html[data-theme="light"] .skills h2,
+html[data-theme="light"] .projects h2,
+html[data-theme="light"] .education h2,
+html[data-theme="light"] .certificates h2,
+html[data-theme="light"] .contact h2,
+html[data-theme="light"] .contact h3 {
+  color: #192216 !important;
+}
+
+/* Hero intro and description */
+html[data-theme="light"] .hero-intro,
+html[data-theme="light"] .hero-role,
+html[data-theme="light"] .hero-description,
+html[data-theme="light"] .hero-meta,
+html[data-theme="light"] .hero-meta span,
+html[data-theme="light"] .hero-socials .find-me {
+  color: #515c4b !important;
+}
+
+/* Navbar logo and links */
+html[data-theme="light"] .navbar {
+  background: rgba(247, 249, 243, 0.97) !important;
+  border-color: #d0dac5 !important;
+}
+
+html[data-theme="light"] .navbar .logo {
+  color: #192216 !important;
+}
+
+html[data-theme="light"] .navbar .nav-links a {
+  color: #263323 !important;
+}
+
+/* Buttons */
+html[data-theme="light"] .secondary-btn,
+html[data-theme="light"] .about-btn:not(.primary-about-btn) {
+  color: #263323 !important;
+  background: #f7f9f3 !important;
+  border-color: #65765a !important;
+}
+
+html[data-theme="light"] .primary-btn,
+html[data-theme="light"] .primary-about-btn,
+html[data-theme="light"] .contact-submit {
+  color: #192216 !important;
+}
+
+/* Cards */
+html[data-theme="light"] .about-highlights,
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .journey-column,
+html[data-theme="light"] .timeline-card,
+html[data-theme="light"] .certificate-card,
+html[data-theme="light"] .contact-form-card {
+  background: #e8eee0 !important;
+  color: #192216 !important;
+  border-color: #d0dac5 !important;
+}
+
+/* Card headings and body text */
+html[data-theme="light"] .skill-card h3,
+html[data-theme="light"] .project-card h3,
+html[data-theme="light"] .timeline-card h4,
+html[data-theme="light"] .certificate-info h3 {
+  color: #192216 !important;
+}
+
+html[data-theme="light"] .skill-description,
+html[data-theme="light"] .project-description,
+html[data-theme="light"] .certificate-description,
+html[data-theme="light"] .timeline-detail,
+html[data-theme="light"] .about-subtitle,
+html[data-theme="light"] .skills-subtitle,
+html[data-theme="light"] .projects-subtitle,
+html[data-theme="light"] .education-subtitle,
+html[data-theme="light"] .certificates-subtitle,
+html[data-theme="light"] .contact-subtitle {
+  color: #515c4b !important;
+}
+
+/* Preserve green accents */
+html[data-theme="light"] .hero h1 span,
+html[data-theme="light"] .about h2 span,
+html[data-theme="light"] .skills h2 span,
+html[data-theme="light"] .projects h2 span,
+html[data-theme="light"] .education h2 span,
+html[data-theme="light"] .certificates h2 span,
+html[data-theme="light"] .contact h2 span,
+html[data-theme="light"] .hero-typewriter {
+  color: #477900 !important;
+}
+
+/* Code editor panel: keep dark, readable contrast */
+html[data-theme="light"] .visual-panel,
+html[data-theme="light"] .code-window {
+  background: #172017 !important;
+  color: #f0f4eb !important;
+}
+
+/* Contact form */
+html[data-theme="light"] .contact-field label {
+  color: #263323 !important;
+}
+
+html[data-theme="light"] .contact-field input,
+html[data-theme="light"] .contact-field textarea {
+  background: #f7f9f3 !important;
+  color: #192216 !important;
+  border-color: #c5d0b9 !important;
+}
+
+html[data-theme="light"] .contact-field input::placeholder,
+html[data-theme="light"] .contact-field textarea::placeholder {
+  color: #687461 !important;
+}
+
+/* Theme toggle */
+html[data-theme="light"] .theme-toggle {
+  background: #e8eee0 !important;
+  color: #192216 !important;
+  border-color: #c5d0b9 !important;
+}
+
+/* ===== LIGHT MODE: EDUCATION + CERTIFICATE TEXT FIX ===== */
+
+/* Education card headings */
+html[data-theme="light"] .about-highlights h3,
+html[data-theme="light"] .journey-column h3,
+html[data-theme="light"] .timeline-card h4,
+html[data-theme="light"] .timeline-institute,
+html[data-theme="light"] .timeline-period {
+  color: #24351c !important;
+}
+
+/* About highlight cards */
+html[data-theme="light"] .about-highlights h3,
+html[data-theme="light"] .about-highlights h4 {
+  color: #24351c !important;
+}
+
+html[data-theme="light"] .about-highlights p,
+html[data-theme="light"] .about-highlights span {
+  color: #515c4b;
+}
+
+/* School and university names */
+html[data-theme="light"] .timeline-institute {
+  color: #36452f !important;
+  font-weight: 500;
+}
+
+/* Certificate organization names */
+html[data-theme="light"] .certificate-organization {
+  color: #3f6900 !important;
+  font-weight: 700;
+}
+
+/* Certificate links */
+html[data-theme="light"] .certificate-link {
+  color: #3f6900 !important;
+}
+
+/* Certificate numbers and labels */
+html[data-theme="light"] .certificate-number,
+html[data-theme="light"] .certificates-bottom span {
+  color: #3f6900 !important;
+}
+
+/* Main section headings */
+html[data-theme="light"] .education-heading h2,
+html[data-theme="light"] .certificates-heading h2,
+html[data-theme="light"] .about-heading h2 {
+  color: #192216 !important;
+}
+
+/* Green heading words */
+html[data-theme="light"] .education-heading h2 span,
+html[data-theme="light"] .certificates-heading h2 span,
+html[data-theme="light"] .about-heading h2 span {
+  color: #3f6900 !important;
+}
+
+/* Typewriter text */
+html[data-theme="light"] .certificate-typewriter {
+  color: #3f6900 !important;
+}
+
+html[data-theme="light"] .certificate-typewriter > span:first-child {
+  color: #24351c !important;
+}
+
+/* About highlight card headings */
+html[data-theme="light"] .about-highlights h3 {
+  color: #24351c !important;
+}
+
+/* Certificate description and school detail */
+html[data-theme="light"] .certificate-description,
+html[data-theme="light"] .timeline-detail {
+  color: #515c4b !important;
+}
+
+/* Badges */
+html[data-theme="light"] .certificate-type,
+html[data-theme="light"] .timeline-status {
+  color: #304321 !important;
+  background: #dce8cf !important;
+  border-color: #c5d5b5 !important;
+}

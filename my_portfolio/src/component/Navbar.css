@@ -1,0 +1,139 @@
+
+.navbar {
+  width: min(1150px, 92%);
+  min-height: 70px;
+  margin: 20px auto 0;
+  padding: 14px 22px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+
+  position: sticky;
+  top: 12px;
+  z-index: 1000;
+
+  background: rgba(15, 18, 15, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid #292f27;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+  flex-shrink: 0;
+  color: #f5f7f2;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #b6ff3b;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-links a {
+  padding: 10px 12px;
+  border-radius: 9px;
+
+  color: #a1a8a0;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: #b6ff3b;
+  background: rgba(182, 255, 59, 0.07);
+}
+
+.nav-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  border: 1px solid #52613f;
+  border-radius: 10px;
+
+  color: #f5f7f2;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+
+  transition: all 0.25s ease;
+}
+
+.nav-cta span {
+  color: #b6ff3b;
+}
+
+.nav-cta:hover {
+  color: #10140b;
+  background: #b6ff3b;
+  border-color: #b6ff3b;
+}
+
+.nav-cta:hover span {
+  color: #10140b;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .navbar {
+    width: 94%;
+    margin-top: 10px;
+    padding: 14px;
+    top: 6px;
+    border-radius: 14px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-cta {
+    padding: 10px 12px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 9px 10px;
+    font-size: 11px;
+  }
+}
