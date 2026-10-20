@@ -1,0 +1,72 @@
+.certificates-page {
+  min-height: 100vh;
+  padding: 60px 8% 100px;
+  background: #0d100d;
+  color: #f5f7f2;
+  box-sizing: border-box;
+}
+
+.certificates-page-header {
+  max-width: 1200px;
+  margin: 0 auto 55px;
+}
+
+.certificates-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b6ff3b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(182, 255, 59, 0.05);
+  border: 1px solid #252b23;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.certificates-back-link:hover {
+  transform: translateX(-4px);
+  border-color: #b6ff3b;
+  background: rgba(182, 255, 59, 0.12);
+  color: #c8ff70;
+}
+
+.certificates-page-intro {
+  text-align: center;
+}
+
+/* Light mode support */
+html[data-theme="light"] .certificates-page {
+  background: #f0f4eb !important;
+  color: #192216 !important;
+}
+
+html[data-theme="light"] .certificates-back-link {
+  color: #3f6900 !important;
+  background: #e8eee0 !important;
+  border-color: #d0dac5 !important;
+}
+
+html[data-theme="light"] .certificates-back-link:hover {
+  border-color: #477900 !important;
+  background: #dce5d2 !important;
+  color: #24351c !important;
+}
+
+@media (max-width: 650px) {
+  .certificates-page {
+    padding: 45px 5% 75px;
+  }
+
+  .certificates-back-link {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+}

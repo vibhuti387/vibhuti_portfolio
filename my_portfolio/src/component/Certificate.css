@@ -194,6 +194,75 @@
   font-size: 12px;
 }
 
+/* Skills tags */
+.certificate-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.certificate-skill-tag {
+  color: #999f96;
+  background: rgba(182, 255, 59, 0.05);
+  border: 1px solid #252b23;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+html[data-theme="light"] .certificate-skill-tag {
+  color: #515c4b !important;
+  background: #f7f9f3 !important;
+  border-color: #d0dac5 !important;
+}
+
+/* View all button */
+.certificates-view-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.certificates-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+  color: #f5f7f2;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #454b43;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.certificates-view-all-btn:hover {
+  border-color: #b6ff3b;
+  color: #b6ff3b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(182, 255, 59, 0.1);
+}
+
+html[data-theme="light"] .certificates-view-all-btn {
+  color: #263323 !important;
+  background: #f7f9f3 !important;
+  border-color: #65765a !important;
+}
+
+html[data-theme="light"] .certificates-view-all-btn:hover {
+  border-color: #477900 !important;
+  color: #477900 !important;
+}
+
 /* Bottom message */
 .certificates-bottom {
   display: flex;
