@@ -30,6 +30,10 @@ export async function sendContactNotification({ name, email, subject, message, d
       user,
       pass,
     },
+
+    connectionTimeout: 1500,
+    greetingTimeout: 1000,
+    socketTimeout: 2000,
   });
 
   const formattedDate = date
