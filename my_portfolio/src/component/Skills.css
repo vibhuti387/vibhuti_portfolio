@@ -59,7 +59,7 @@
 
 .skill-card {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   min-width: 0;
   padding: 28px;
   border-radius: 16px;
@@ -98,6 +98,8 @@
   width: 0;
   height: 2px;
   background: #b6ff3b;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   transition: width 0.35s ease;
 }
 
@@ -165,11 +167,16 @@
   margin-bottom: 24px;
 }
 
-/* Skill tags */
+/* Skill tags & Tooltips */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.skill-tag-wrapper {
+  position: relative;
+  display: inline-flex;
 }
 
 .skill-tag {
@@ -180,17 +187,86 @@
   color: #c5cec0;
   font-size: 12px;
   font-weight: 650;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
 
   transition:
     color 0.25s ease,
     border-color 0.25s ease,
-    background 0.25s ease;
+    background 0.25s ease,
+    transform 0.2s ease;
 }
 
-.skill-tag:hover {
+.skill-tag:hover,
+.skill-tag:focus-visible,
+.skill-tag.has-active-tooltip {
   color: #b6ff3b;
   background: rgba(182, 255, 59, 0.07);
   border-color: rgba(182, 255, 59, 0.5);
+  transform: translateY(-2px);
+}
+
+.skill-tag:focus-visible {
+  outline: 2px solid #b6ff3b;
+  outline-offset: 2px;
+}
+
+/* Tooltip styles */
+.skill-tooltip {
+  position: absolute;
+  bottom: calc(100% + 9px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 100;
+
+  background: #10150f;
+  color: #f5f7f2;
+  border: 1px solid #3a4833;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #3a4833 transparent transparent transparent;
+}
+
+.tooltip-title {
+  color: #8fa086;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.tooltip-value {
+  color: #b6ff3b;
+  font-weight: 750;
+}
+
+.skill-tag-wrapper:hover .skill-tooltip,
+.skill-tag:focus-visible + .skill-tooltip,
+.skill-tag:focus + .skill-tooltip,
+.skill-tooltip.tooltip-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Bottom accent */

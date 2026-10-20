@@ -373,11 +373,36 @@ html[data-theme="light"] .experience-tags span {
 }
 
 html[data-theme="light"] .skill-tag:hover,
+html[data-theme="light"] .skill-tag:focus-visible,
+html[data-theme="light"] .skill-tag.has-active-tooltip,
 html[data-theme="light"] .project-card:hover .project-tag,
 html[data-theme="light"] .project-tag:hover {
   border-color: #386100 !important;
   color: #24351c !important;
   background: #e4ecd9 !important;
+}
+
+html[data-theme="light"] .skill-tag:focus-visible {
+  outline-color: #386100 !important;
+}
+
+html[data-theme="light"] .skill-tooltip {
+  background: #ffffff !important;
+  color: #1b261a !important;
+  border-color: #c5d0ba !important;
+  box-shadow: 0 8px 24px rgba(30, 45, 20, 0.15) !important;
+}
+
+html[data-theme="light"] .skill-tooltip::after {
+  border-color: #c5d0ba transparent transparent transparent !important;
+}
+
+html[data-theme="light"] .tooltip-title {
+  color: #56644f !important;
+}
+
+html[data-theme="light"] .tooltip-value {
+  color: #386100 !important;
 }
 
 /* Skill card top indicator & bottom line */
