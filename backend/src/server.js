@@ -24,8 +24,7 @@ const resumePath = path.resolve(__dirname, "../resumes");
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
-   
+    origin: process.env.CLIENT_URL || "http://localhost:5173",
   })
 );
 app.use(express.json());
